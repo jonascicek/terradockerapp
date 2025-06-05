@@ -120,7 +120,7 @@ Viele Einzelschritte mit Docker CLI, fehleranfällig, schwer nachvollziehbar.
 * **terraform apply (nach Update):**
   ![terraform apply update](screenshots/applyafterchange.png)
 * **terraform destroy:**
-  ![terraform destroy](screenshots/destory.png)
+  ![terraform destroy](screenshots/destroy.png)
 
 ---
 
