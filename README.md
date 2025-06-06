@@ -137,3 +137,30 @@ Viele Einzelschritte mit Docker CLI, fehleranfällig, schwer nachvollziehbar.
 Mit Terraform lassen sich auch lokale, mehrschichtige Container-Stacks effizient, wiederholbar und nachvollziehbar bereitstellen. Durch Nutzung von Modulen, Variablen, Locals und Outputs konnte ich die wichtigsten IaC-Konzepte aus dem Kurs erfolgreich anwenden und typische Fehler beheben.
 
 ---
+
+## Remote State Backend (AWS S3)
+
+### Warum?
+- Gemeinsamer Zugriff auf den Terraform-Zustand im Team
+- Schutz vor Datenverlust (lokaler `terraform.tfstate` entfällt)
+- S3 bietet Versionierung, Verschlüsselung, Zugriffskontrolle
+
+### Backend-Konfiguration:
+
+```hcl
+terraform {
+  backend "s3" {
+    bucket = "terraform-state-jonas-2025"
+    key    = "terraform/state/my-iaC-project.tfstate"
+    region = "eu-central-1"
+    encrypt = true
+  }
+}
+```
+
+* **terraform init:**
+  ![aws terraform init](screenshots/awsinit.png)
+* **statelist:**
+  ![statelist](screenshots/statelist.png)
+* **awsconsole:**
+  ![awsconsole](screenshots/awsconsole.png)
