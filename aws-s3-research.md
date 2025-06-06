@@ -2,21 +2,21 @@
 ---
 
 ````markdown
-# 📘 Terraform AWS Provider – Recherche & Dokumentation
+#  Terraform AWS Provider – Recherche & Dokumentation
 
-## ✅ Ziel der Aufgabe
+##  Ziel der Aufgabe
 
 Diese Rechercheaufgabe befasst sich mit dem **AWS Provider für Terraform**. Ziel war es, zu verstehen, wie der AWS Provider funktioniert, wie man ihn konfiguriert, wie AWS-Ressourcen über Terraform abgebildet werden und wie man die offizielle Dokumentation korrekt nutzt. Die praktische Umsetzung einer einfachen AWS-Ressource (eines S3 Buckets) wurde optional, aber empfohlen, durchgeführt.
 
 ---
 
-## 🔍 Die Rolle des AWS Providers in Terraform
+##  Die Rolle des AWS Providers in Terraform
 
 Der **AWS Provider** verbindet Terraform mit Amazon Web Services (AWS). Er stellt die notwendigen Funktionen bereit, um Infrastrukturressourcen in einem AWS-Account programmatisch über Terraform zu erstellen, zu verändern und zu löschen. Terraform verwendet den Provider, um die Konfiguration in HCL (HashiCorp Configuration Language) in konkrete API-Aufrufe an AWS zu übersetzen.
 
 ---
 
-## ⚙️ Konfiguration des AWS Providers
+##  Konfiguration des AWS Providers
 
 Die Konfiguration erfolgt im Terraform-Code über den `provider`-Block. In unserem Fall wurde insbesondere die Region angegeben:
 
@@ -38,7 +38,7 @@ Die Authentifizierung erfolgt **sicher über bestehende AWS-Konfigurationsmethod
 
 ---
 
-## 🪣 Die Ressource `aws_s3_bucket`
+##  Die Ressource `aws_s3_bucket`
 
 ### Bedeutung
 
@@ -80,14 +80,14 @@ output "bucket_arn" {
 
 ---
 
-## 📚 Dokumentationsquellen
+##  Dokumentationsquellen
 
 Die Informationen wurden aus der offiziellen Terraform Registry entnommen:
 
-* 🔗 **AWS Provider Übersicht**:
+*  **AWS Provider Übersicht**:
   [https://registry.terraform.io/providers/hashicorp/aws/latest](https://registry.terraform.io/providers/hashicorp/aws/latest)
 
-* 🔗 **Spezifische Ressource `aws_s3_bucket`**:
+*  **Spezifische Ressource `aws_s3_bucket`**:
   [https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3\_bucket](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket)
 
 ### Unterschied: Argument Reference vs. Attribute Reference
